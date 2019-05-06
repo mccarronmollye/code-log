@@ -8,12 +8,14 @@ class Card extends Component {
         <div className="ui cards">
           <div className="card">
             <div className="content">
-              <ul>
-                <li>Goals I accomplished today:</li>
-                <li>What I learned:</li>
-                <li>What I don't understand:</li>
-                <li>Goals for tomorrow:</li>
-              </ul>
+              <p>Date</p>
+              <h4 id="title">Title</h4>
+                <ul>
+                  <li>Goals I accomplished today:</li>
+                  <li>What I learned:</li>
+                  <li>What I don't understand:</li>
+                  <li>Goals for tomorrow:</li>
+                </ul>
             </div>
             <div className="feelings">
               <i className="smile outline icon"></i>

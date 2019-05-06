@@ -47,6 +47,25 @@ class CardInput extends Component{
                 <label>Goals for tomorrow:</label>
                 <textarea rows="2" placeholder="Persist user input to the database."/>
               </div>
+              <div className="field">
+                <label>How I feel about my coding progress today:</label>
+                <div>
+                  <div className="ui radio checkbox">
+                      <input type="radio" name="mood"/>
+                      <label><i className="large smile outline icon"></i></label>
+                  </div>
+                </div>
+                <div>
+                  <div className="ui radio checkbox">
+                      <input type="radio" name="mood"/>
+                      <label><i className="large meh outline icon"></i></label>
+                  </div>
+                </div>
+                <div className="ui radio checkbox">
+                    <input type="radio" name="mood"/>
+                    <label><i className="large frown outline icon"></i></label>
+                </div>
+              </div>
             <input type="submit"/>
           </form>
         </div>
