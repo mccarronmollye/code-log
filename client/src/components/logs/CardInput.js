@@ -19,13 +19,7 @@ class CardInput extends Component{
 
   handleOnChange(event){
     this.setState({
-      title: event.target.value,
-      date: event.target.value,
-      learned: event.target.value,
-      unsure: event.target.value,
-      goals_accomplished: event.target.value,
-      goals_tomorrow: event.target.value,
-      mood: event.target.value,
+      [event.target.name]: event.target.value
     })
   }
 
