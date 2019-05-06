@@ -7,6 +7,7 @@ class CardContainer extends Component {
     return(
     <div>
       <CardInput/>
+      <h3>Code Logs</h3>
       <Cards/>
     </div>
     )

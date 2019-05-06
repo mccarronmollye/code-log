@@ -5,3 +5,7 @@
   border-color: silver;
   border-style: solid
 }
+
+.card-container{
+  padding: 20px;
+}

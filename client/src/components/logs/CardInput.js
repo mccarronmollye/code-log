@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CardInput.css'
+import './log.css'
 
 class CardInput extends Component{
 
@@ -25,27 +25,27 @@ class CardInput extends Component{
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
               <div className="field">
                 <label>Title:</label>
-                <input type="text" placeholder="title"/>
+                <input type="text" placeholder="Day 2 of #100DaysOfCode"/>
               </div>
               <div className="field">
                 <label>Date:</label>
-                <input type="text" placeholder="date"/>
+                <input type="text" placeholder="01/01/19"/>
               </div>
               <div className="field">
                 <label>Goals I accomplished today:</label>
-                <textarea rows="2" placeholder="goals accomplished..."/>
+                <textarea rows="2" placeholder="Built form for personal project."/>
               </div>
               <div className="field">
                 <label>What I learned today:</label>
-                <textarea rows="2" placeholder="what I learned..."/>
+                <textarea rows="2" placeholder="Properly organizing Component files in React"/>
               </div>
               <div className="field">
                 <label>What I don't understand:</label>
-                <textarea rows="2" placeholder="what I don't understand..."/>
+                <textarea rows="2" placeholder="How user input on the front end (React) will link to Rails backend of project."/>
               </div>
               <div className="field">
                 <label>Goals for tomorrow:</label>
-                <textarea rows="2" placeholder="goals for tomorrow..."/>
+                <textarea rows="2" placeholder="Persist user input to the database."/>
               </div>
             <input type="submit"/>
           </form>
