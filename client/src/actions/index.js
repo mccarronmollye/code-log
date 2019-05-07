@@ -14,7 +14,24 @@ export const getLogs = () => {
     //dispatch data
 
 
+export const addLog = (log) => {
+  return dispatch => {
+    dispatch({type: "ADD_LOG"})
+    return fetch('/logs', {
+      method: "POST",
+    }).then(response => response.json())
+    .then(log => dispatch({type: "ADD_LOG"}))
+  }
+}
 
-// export const postLogs = (log) => {
-//
+// export const addLog = (log) => {
+//   return dispatch => {
+//     dispatch({type: "ADD_LOG"})
+//     return fetch('/logs', {
+//       method: "POST",
+//       headers:{
+//         "Cotent-Type": "application/json"
+//       }
+//     }).then(response => response.json())
+//   }
 // }
