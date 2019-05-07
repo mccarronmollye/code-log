@@ -13,11 +13,12 @@ class CardInput extends Component{
       unsure: '',
       goals_accomplished: '',
       goals_tomorrow: '',
-      mood: ''
+      mood: 'smile'
     }
   }
 
-  handleOnChange(event){
+  handleOnChange = (event) => {
+    console.log(event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -96,26 +97,41 @@ class CardInput extends Component{
               </div>
               <div className="field">
                 <label>How I feel about my coding progress today:</label>
-                <div className="ui radio checkbox space">
-                    <input
-                      type="radio"
-                      name="smile"
-                      />
-                    <label><i className="big smile outline icon"/></label>
-                </div>
-                <div className="ui radio checkbox space">
-                    <input
-                      type="radio"
-                      name="mwh"
-                      />
-                    <label><i className="big meh outline icon"/></label>
-                </div>
-                <div className="ui radio checkbox space">
-                    <input
-                      type="radio"
-                      name="frown"/>
-                    <label><i className="big frown outline icon"/></label>
-                </div>
+                  <div className="ui radio checkbox space">
+                      <input
+                        type="radio"
+                        name="mood"
+                        value="smile"
+                        checked={true}
+                        onChange={this.handleOnChange}
+                        />
+                      <label><i className="big smile outline icon"/></label>
+                  </div>
+                  <div className="ui radio checkbox space">
+                      <input
+                        type="radio"
+                        name="mood"
+                        value="meh"
+                        onChange={this.handleOnChange}
+                        />
+                      <label><i className="big meh outline icon"/></label>
+                  </div>
+                  <div className="ui radio checkbox space">
+                      <input
+                        type="radio"
+                        name="mood"
+                        value="frown"
+                        />
+                      <label><i className="big frown outline icon"/></label>
+                  </div>
+              </div>
+              <div className="field">
+                <label>How I feel about my coding progress today:</label>
+                <select onChange={this.handleOnChange}>
+                  <option name="mood" value="smile">Great!</option>
+                  <option name="mood" value="meh">Okay</option>
+                  <option name="mood" value="frown">Not Well</option>
+                </select>
               </div>
             <input type="submit"/>
           </form>
