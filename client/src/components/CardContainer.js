@@ -24,10 +24,5 @@ class CardContainer extends Component {
   }
 }
 
-// const mapStateToProps = state => ({ codeLogs: state.codeLogs })
-
-// const mapDispatchToProps = dispatch => ({
-//   addCodeLog:
-// })
 
 export default CardContainer
