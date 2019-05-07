@@ -25,7 +25,7 @@ class Cards extends Component {
                   </ul>
               </div>
               <div className="feelings">
-                <i className={`${log.mood} outline icon`}></i>
+                <i className={`big ${log.mood} outline icon`}></i>
               </div>
             </div>
           </div>

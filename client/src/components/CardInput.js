@@ -26,7 +26,7 @@ class CardInput extends Component{
 
   handleOnSubmit(event){
     event.preventDefault();
-    this.props.addCodeLog(this)
+    this.props.addLog(this)
   }
 
 
@@ -97,41 +97,35 @@ class CardInput extends Component{
               </div>
               <div className="field">
                 <label>How I feel about my coding progress today:</label>
-                  <div className="ui radio checkbox space">
-                      <input
-                        type="radio"
-                        name="mood"
-                        value="smile"
-                        checked={true}
-                        onChange={this.handleOnChange}
-                        />
-                      <label><i className="big smile outline icon"/></label>
-                  </div>
-                  <div className="ui radio checkbox space">
-                      <input
-                        type="radio"
-                        name="mood"
-                        value="meh"
-                        onChange={this.handleOnChange}
-                        />
-                      <label><i className="big meh outline icon"/></label>
-                  </div>
-                  <div className="ui radio checkbox space">
-                      <input
-                        type="radio"
-                        name="mood"
-                        value="frown"
-                        />
-                      <label><i className="big frown outline icon"/></label>
-                  </div>
-              </div>
-              <div className="field">
-                <label>How I feel about my coding progress today:</label>
-                <select onChange={this.handleOnChange}>
-                  <option name="mood" value="smile">Great!</option>
-                  <option name="mood" value="meh">Okay</option>
-                  <option name="mood" value="frown">Not Well</option>
-                </select>
+                  <div>
+                    <input
+                      className="ui radio checkbox space"
+                      type="radio"
+                      name="mood"
+                      value="smile"
+                      checked={this.state.mood == "smile" ? true : false}
+                      onChange={this.handleOnChange}
+                      />
+                    <label><i className="big smile outline icon"/></label>
+                    <input
+                      className="ui radio checkbox space"
+                      type="radio"
+                      name="mood"
+                      value="meh"
+                      checked={this.state.mood == "meh" ? true : false}
+                      onChange={this.handleOnChange}
+                      />
+                    <label><i className="big meh outline icon"/></label>
+                    <input
+                      className="ui radio checkbox space"
+                      type="radio"
+                      name="mood"
+                      value="frown"
+                      checked={this.state.mood == "frown" ? true : false}
+                      onChange={this.handleOnChange}
+                      />
+                    <label><i className="big frown outline icon"/></label>
+                </div>
               </div>
             <input type="submit"/>
           </form>

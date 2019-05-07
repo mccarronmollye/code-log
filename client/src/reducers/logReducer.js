@@ -11,6 +11,13 @@ export default (state = {logs: [], loading: false}, action) => {
         loading: false,
         logs: action.payload
       }
+
+    case "ADD_LOG":
+      return {
+        ...state,
+        logs: [...state.logs, action.log]
+      }
+
     default:
       return state;
   }

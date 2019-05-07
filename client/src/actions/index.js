@@ -12,3 +12,9 @@ export const getLogs = () => {
   // return fetch url
     //get response
     //dispatch data
+
+
+
+// export const postLogs = (log) => {
+//
+// }
