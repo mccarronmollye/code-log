@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3000'
+    origins 'http://localhost:3000'#will have to  change to domain of Heroku once you set that up! Proxy as well in package.json
 
     resource '*',
       headers: :any,

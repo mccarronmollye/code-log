@@ -6,3 +6,9 @@ export const getLogs = () => {
       .then(logs => dispatch({type: "LOADED_LOGS", payload: logs}))
   }
 }
+
+//return function (dispatch)
+  //dispatch action to start the loading proccess
+  // return fetch url
+    //get response
+    //dispatch data

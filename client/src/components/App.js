@@ -15,7 +15,10 @@ class App extends Component {
    }
 
   render() {
-    const logs = this.props.logs.map((log, i) => <li key={i}>{log.title}</li>)
+    const logs = this.props.logs.map((log, i) =>
+
+      <li key={i}>{log.title}</li>)
+
     return (
       <div>
         <CardContainer/>
