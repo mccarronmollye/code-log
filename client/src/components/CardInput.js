@@ -27,6 +27,15 @@ class CardInput extends Component{
   handleOnSubmit(event){
     event.preventDefault();
     this.props.addLog(this.state)
+    this.setState({
+      title: '',
+      date: '',
+      learned: '',
+      unsure: '',
+      goals_accomplished: '',
+      goals_tomorrow: '',
+      mood: 'smile'
+    })
   }
 
 
@@ -49,7 +58,7 @@ class CardInput extends Component{
                 <label>Date:</label>
                 <input
                   name="date"
-                  type="text"
+                  type="date"
                   value={this.state.date}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="01/01/19"

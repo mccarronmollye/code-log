@@ -11,8 +11,6 @@ class Cards extends Component {
   renderList(){
     return this.props.logs.map(log => {
       return (
-        <div className="card-container">
-          <div className="ui cards">
             <div className="card" key={log.id}>
               <div className="content">
                 <p>{log.date}</p>
@@ -28,14 +26,16 @@ class Cards extends Component {
                 <i className={`big ${log.mood} outline icon`}></i>
               </div>
             </div>
-          </div>
-        </div>
       )
     })
   }
 
   render(){
-    return <div className="ui relaxed divided list">{this.renderList()}</div>
+    return (
+        <div className="card-container">
+          <div className="ui two cards">{this.renderList()}</div>
+        </div>
+    )
   }
 
 }
