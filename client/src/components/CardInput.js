@@ -26,7 +26,7 @@ class CardInput extends Component{
 
   handleOnSubmit(event){
     event.preventDefault();
-    this.props.addLog(this)
+    this.props.addLog(this.state)
   }
 
 

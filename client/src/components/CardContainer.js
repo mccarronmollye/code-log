@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Cards from './Cards'
 import CardInput from './CardInput'
 import { connect } from 'react-redux'
+import { addLog } from '../actions'
 
 class CardContainer extends Component {
   render(){
@@ -24,6 +25,4 @@ class CardContainer extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({ addLog: log => dispatch({type: "ADD_LOG, log"})})
-
-export default connect(mapDispatchToProps)(CardContainer)
+export default connect(null, {addLog})(CardContainer)

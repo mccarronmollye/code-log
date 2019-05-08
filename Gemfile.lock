@@ -47,6 +47,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     erubi (1.8.0)
@@ -78,6 +79,12 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (1.0.3)
@@ -113,6 +120,7 @@ GEM
       ffi (~> 1.0)
     rb-readline (0.5.5)
     ruby_dep (1.5.0)
+    slop (3.6.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -142,6 +150,8 @@ DEPENDENCIES
   foreman (~> 0.82.0)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  pry
+  pry-remote
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.3)
