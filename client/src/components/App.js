@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardContainer from './CardContainer'
+import LogContainer from './LogContainer'
 
 
 class App extends Component {
@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <CardContainer/>
+        <LogContainer/>
       </div>
     )
   }

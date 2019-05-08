@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Cards from './Cards'
-import CardInput from './CardInput'
+import LogList from './LogList'
+import LogForm from './LogForm'
 import { connect } from 'react-redux'
 import { addLog } from '../actions'
 
-class CardContainer extends Component {
+class LogContainer extends Component {
   render(){
     return(
     <div>
@@ -12,17 +12,15 @@ class CardContainer extends Component {
         <h1>Daily Code Log</h1>
       </div>
       <div className="card-input">
-        <CardInput addLog={this.props.addLog}/>
-      </div>
-      <div className="code-logs" >
-        <h3>Code Logs</h3>
+        <LogForm addLog={this.props.addLog}/>
       </div>
       <div>
-        <Cards/>
+        <h3 className="code-logs">Code Logs</h3>
+        <LogList/>
       </div>
     </div>
     )
   }
 }
 
-export default connect(null, {addLog})(CardContainer)
+export default connect(null, {addLog})(LogContainer)

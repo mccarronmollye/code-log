@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getLogs } from '../actions'
+import _ from 'lodash';
 import './log.css'
 
-class Cards extends Component {
+class LogList extends Component {
   componentDidMount(){
     this.props.getLogs();
    }
@@ -47,4 +48,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getLogs})(Cards);
+export default connect(mapStateToProps, {getLogs})(LogList);

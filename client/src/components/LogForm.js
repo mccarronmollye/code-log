@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './log.css'
 
-class CardInput extends Component{
+class LogForm extends Component{
 
   constructor(props){
     super(props)
@@ -52,6 +52,7 @@ class CardInput extends Component{
                   value={this.state.title}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Day 2 of #100DaysOfCode"
+                  required
                 />
               </div>
               <div className="field">
@@ -62,6 +63,7 @@ class CardInput extends Component{
                   value={this.state.date}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="01/01/19"
+                  required
                   />
               </div>
               <div className="field">
@@ -72,6 +74,7 @@ class CardInput extends Component{
                   value={this.state.goals_accomplished}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Built form for personal project."
+                  required
                   />
               </div>
               <div className="field">
@@ -82,6 +85,7 @@ class CardInput extends Component{
                   value={this.state.learned}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Properly organizing Component files in React"
+                  required
                 />
               </div>
               <div className="field">
@@ -92,6 +96,7 @@ class CardInput extends Component{
                   value={this.state.unsure}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="How user input on the front end (React) will link to Rails backend of project."
+                  required
                   />
               </div>
               <div className="field">
@@ -102,6 +107,7 @@ class CardInput extends Component{
                   value={this.state.goals_tomorrow}
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Persist user input to the database."
+                  required
                   />
               </div>
               <div className="field">
@@ -144,4 +150,4 @@ class CardInput extends Component{
   }
 }
 
-export default CardInput;
+export default LogForm;
