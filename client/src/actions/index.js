@@ -7,6 +7,15 @@ export const getLogs = () => {
   }
 }
 
+// export const getLog = () => {
+//   return dispatch => {
+//     dispatch({type: "LOADING_LOG"});
+//     return fetch('/logs/')
+//       .then(resp => resp.json())
+//       .then(logs => dispatch({type: "LOADED_LOG", payload: log}))
+//   }
+// }
+
 //return function (dispatch)
   //dispatch action to start the loading proccess
   // return fetch url

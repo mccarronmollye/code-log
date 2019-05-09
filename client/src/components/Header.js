@@ -8,7 +8,7 @@ class Header extends Component {
       <Link to="/" className="item">
         All Code Logs
       </Link>
-      <div className="right menu">
+      <div className="center menu">
         <Link to="/new" className="item">
           Create a new Code Log
         </Link>

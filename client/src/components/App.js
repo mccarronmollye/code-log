@@ -14,6 +14,7 @@ class App extends Component {
           <div>
             <h1><Header/></h1>
             <Route path="/" exact component={LogListContainer}/>
+            <Route path="/logs" exact component={LogListContainer}/>
             <Route path="/new" exact component={LogFormContainer}/>
           </div>
         </BrowserRouter>

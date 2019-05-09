@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { getLogs } from '../actions'
 import _ from 'lodash';
 import './log.css'
+import { Link } from 'react-router-dom';
 
 class LogList extends Component {
   componentDidMount(){
@@ -23,12 +24,12 @@ class LogList extends Component {
                     <li>Goals for tomorrow: {log.goals_tomorrow}</li>
                   </ul>
               </div>
-              <div className="feelings">
+              <div>
                 <i className={`big ${log.mood} outline icon`}></i>
+                <Link to={`/logs/${log.id}`}>View Log</Link>
               </div>
             </div>
       )
-      debugger
     })
   }
 
@@ -39,7 +40,6 @@ class LogList extends Component {
         </div>
     )
   }
-
 }
 
 //{_.orderBy(this.renderList(), [log, date])}
