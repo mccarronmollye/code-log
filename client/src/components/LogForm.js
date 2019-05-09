@@ -118,7 +118,7 @@ class LogForm extends Component{
                       type="radio"
                       name="mood"
                       value="smile"
-                      checked={this.state.mood == "smile" ? true : false}
+                      checked={this.state.mood === "smile" ? true : false}
                       onChange={this.handleOnChange}
                       />
                     <label><i className="big smile outline icon"/></label>
@@ -127,7 +127,7 @@ class LogForm extends Component{
                       type="radio"
                       name="mood"
                       value="meh"
-                      checked={this.state.mood == "meh" ? true : false}
+                      checked={this.state.mood === "meh" ? true : false}
                       onChange={this.handleOnChange}
                       />
                     <label><i className="big meh outline icon"/></label>
@@ -136,7 +136,7 @@ class LogForm extends Component{
                       type="radio"
                       name="mood"
                       value="frown"
-                      checked={this.state.mood == "frown" ? true : false}
+                      checked={this.state.mood === "frown" ? true : false}
                       onChange={this.handleOnChange}
                       />
                     <label><i className="big frown outline icon"/></label>

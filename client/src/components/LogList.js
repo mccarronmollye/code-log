@@ -28,6 +28,7 @@ class LogList extends Component {
               </div>
             </div>
       )
+      debugger
     })
   }
 
@@ -41,6 +42,7 @@ class LogList extends Component {
 
 }
 
+//{_.orderBy(this.renderList(), [log, date])}
 const mapStateToProps = state => {
   return {
     logs: state.logReducer.logs,

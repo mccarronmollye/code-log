@@ -4,7 +4,7 @@ import LogForm from './LogForm'
 import { connect } from 'react-redux'
 import { addLog } from '../actions'
 
-class LogContainer extends Component {
+class LogFormContainer extends Component {
   render(){
     return(
     <div>
@@ -14,13 +14,9 @@ class LogContainer extends Component {
       <div className="card-input">
         <LogForm addLog={this.props.addLog}/>
       </div>
-      <div>
-        <h3 className="code-logs">Code Logs</h3>
-        <LogList/>
-      </div>
     </div>
     )
   }
 }
 
-export default connect(null, {addLog})(LogContainer)
+export default connect(null, {addLog})(LogFormContainer)

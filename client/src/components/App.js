@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import LogContainer from './LogContainer'
+import LogFormContainer from './LogFormContainer'
+import LogListContainer from './LogListContainer'
+import Header from './Header'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
 class App extends Component {
@@ -7,7 +10,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <LogContainer/>
+        <BrowserRouter>
+          <div>
+            <h1><Header/></h1>
+            <Route path="/" exact component={LogListContainer}/>
+            <Route path="/new" exact component={LogFormContainer}/>
+          </div>
+        </BrowserRouter>
       </div>
     )
   }
