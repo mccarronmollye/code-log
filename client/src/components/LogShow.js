@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getLogs } from '../actions'
 import { deleteLog } from '../actions'
+import { Link } from 'react-router-dom';
 
 
 class LogShow extends Component {
@@ -36,7 +37,7 @@ class LogShow extends Component {
         <div>
           <i className={`big ${log.mood} outline icon`}></i>
           <button onClick={() => this.handleOnClick()}>Delete</button>
-          <a>Edit</a>
+          <Link to={`/log/edit`}>Edit</Link>
         </div> </> : 'Loading...'}
       </div>
     </div>

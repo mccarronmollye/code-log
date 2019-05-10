@@ -35,3 +35,14 @@ export const deleteLog = (log) => {
       .then(log => dispatch({type: "DELETE_LOG", log}))
   }
 }
+
+export const editLog = (log) => {
+  return dispatch => {
+    return fetch(`/logs`, {
+      method: "PUT",
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({log})
+    }).then(resp => resp.json())
+      .then(log => dispatch({type: "EDIT_LOG", log}))
+  }
+}

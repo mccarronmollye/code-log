@@ -24,6 +24,11 @@ export default (state = {logs: [], loading: false}, action) => {
         ...state, logs
       }
 
+    case "EDIT_LOG":
+      return {
+        
+      }
+
     default:
       return state;
   }
