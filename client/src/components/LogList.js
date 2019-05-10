@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getLogs } from '../actions'
+import { Route } from 'react-router-dom'
+import LogShow from './LogShow'
 import _ from 'lodash';
 import './log.css'
 import { Link } from 'react-router-dom';
 
 class LogList extends Component {
+
   componentDidMount(){
     this.props.getLogs();
    }
