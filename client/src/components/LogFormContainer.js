@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LogList from './LogList'
 import LogForm from './LogForm'
 import { connect } from 'react-redux'
 import { addLog } from '../actions'
@@ -18,5 +17,8 @@ class LogFormContainer extends Component {
     )
   }
 }
+
+//change addLog=  to onFormSubmit add logic to addLog or updateLog depending on route taken
+//let log = this.props.logs.find(log => log.id == this.props.match.params.id)
 
 export default connect(null, {addLog})(LogFormContainer)

@@ -24,9 +24,9 @@ export default (state = {logs: [], loading: false}, action) => {
         ...state, logs
       }
 
-    case "EDIT_LOG":
+    case "UPDATE_LOG":
       return {
-        
+        //map through existing logs and update log that needs to be updated.
       }
 
     default:

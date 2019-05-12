@@ -12,10 +12,10 @@ class LogShow extends Component {
     this.props.getLogs()
   }
 
-  // handleOnClick() {
-  //   let log = this.props.logs.find(log => log.id == this.props.match.params.id)
-  //   this.props.deleteLog()
-  // }
+  handleOnClick(event) {
+     let log = this.props.logs.find(log => log.id == this.props.match.params.id)
+     this.props.deleteLog()
+  }
 
   render(){
 
@@ -24,7 +24,7 @@ class LogShow extends Component {
     return (
     <div className="card-container">
       <div className="ui card">
-        { log ? <> <div className="content">
+        { log ? <div> <div className="content">
            <p>{log.date}</p>
           <h4 id="title">{log.title}</h4>
             <ul>
@@ -36,9 +36,9 @@ class LogShow extends Component {
         </div>
         <div>
           <i className={`big ${log.mood} outline icon`}></i>
-          <button onClick={() => this.handleOnClick()}>Delete</button>
-          <Link to={`/log/edit`}>Edit</Link>
-        </div> </> : 'Loading...'}
+          <button onClick={(event) => this.handleOnClick()}>Delete</button>
+          <Link to={`/logs/${log.id}/edit`}>Edit</Link>
+        </div> </div> : 'Loading...'}
       </div>
     </div>
     )
@@ -56,4 +56,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getLogs})(LogShow);
+export default connect(mapStateToProps, {getLogs, deleteLog})(LogShow);

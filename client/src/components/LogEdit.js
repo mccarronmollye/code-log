@@ -26,7 +26,7 @@ class LogEdit extends Component{
 
   handleOnSubmit(event){
     event.preventDefault();
-    this.props.addLog(this.state)
+    this.props.updateLog(this.state)
     this.setState({
       title: '',
       date: '',

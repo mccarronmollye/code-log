@@ -36,9 +36,9 @@ export const deleteLog = (log) => {
   }
 }
 
-export const editLog = (log) => {
+export const updateLog = (log) => {
   return dispatch => {
-    return fetch(`/logs`, {
+    return fetch(`/logs/${log.id}`, {
       method: "PUT",
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({log})

@@ -19,7 +19,7 @@ class App extends Component {
             <Route path="/" exact component={LogListContainer}/>
             <Route path ="/logs" exact component={LogList}/>
             <Route path="/new" exact component={LogFormContainer}/>
-            <Route path ="/log/edit" exact component={LogEdit}/>
+            <Route path ="/logs/:id/edit" exact component={LogEdit}/>
             <Route path ="/logs/:id" exact component={LogShow}/>
           </div>
         </BrowserRouter>
