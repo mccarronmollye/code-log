@@ -18,7 +18,6 @@ class LogForm extends Component{
   }
 
   handleOnChange = (event) => {
-    console.log(event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -53,6 +52,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Day 2 of #100DaysOfCode"
                   required
+                  autoComplete="off"
                 />
               </div>
               <div className="field">
@@ -64,6 +64,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="01/01/19"
                   required
+                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -75,6 +76,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Built form for personal project."
                   required
+                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -86,6 +88,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Properly organizing Component files in React"
                   required
+                  autoComplete="off"
                 />
               </div>
               <div className="field">
@@ -97,6 +100,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="How user input on the front end (React) will link to Rails backend of project."
                   required
+                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -108,6 +112,7 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Persist user input to the database."
                   required
+                  autoComplete="off"
                   />
               </div>
               <div className="field">
