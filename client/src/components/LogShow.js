@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { getLogs } from '../actions'
-import { deleteLog } from '../actions'
 import { Link } from 'react-router-dom';
+//import { deleteLog } from '../actions'
 
 
 class LogShow extends Component {
@@ -12,14 +10,14 @@ class LogShow extends Component {
     this.props.getLogs()
   }
 
-  handleOnClick(event) {
-     let log = this.props.logs.find(log => log.id == this.props.match.params.id)
-     this.props.deleteLog()
-  }
+  // handleOnClick(event) {
+  //    let log = this.props.logs.find(log => log.id === this.props.match.params.id)
+  //    this.props.deleteLog()
+  // }
 
   render(){
 
-    let log = this.props.logs.find(log => log.id == this.props.match.params.id)
+    let log = this.props.logs.find(log => log.id === this.props.match.params.id)
 
     return (
     <div className="card-container">
@@ -49,11 +47,4 @@ LogShow.defaultProps={
   logs: []
 }
 
-const mapStateToProps = state => {
-  return {
-    logs: state.logReducer.logs,
-    loading: state.logReducer.loading
-  }
-}
-
-export default connect(mapStateToProps, {getLogs, deleteLog})(LogShow);
+export default LogShow;

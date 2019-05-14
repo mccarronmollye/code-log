@@ -18,7 +18,6 @@ class LogEdit extends Component{
   }
 
   handleOnChange = (event) => {
-    console.log(event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })

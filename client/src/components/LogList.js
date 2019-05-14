@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { getLogs } from '../actions'
 import { Route } from 'react-router-dom'
 import LogShow from './LogShow'
 import _ from 'lodash';
 import './log.css'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 class LogList extends Component {
 
-  componentDidMount(){
+  componentDidMount(props){
     this.props.getLogs();
    }
 
-  renderList(){
+  renderList = () => {
+
     return this.props.logs.map(log => {
       return (
             <div className="card" key={log.id}>
@@ -53,4 +53,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getLogs})(LogList);
+export default connect (mapStateToProps)(LogList)
