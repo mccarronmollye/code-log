@@ -25,7 +25,7 @@ class LogForm extends Component{
 
   handleOnSubmit(event){
     event.preventDefault();
-    this.props.addLog(this.state)
+    this.props.addLog(this.state, this.props.history)
     this.setState({
       title: '',
       date: '',

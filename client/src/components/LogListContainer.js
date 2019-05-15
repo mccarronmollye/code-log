@@ -8,10 +8,10 @@ class LogListContainer extends Component {
     return(
       <div>
         <h3 className="code-logs">Code Logs</h3>
-        <LogList getLogs={this.props.getLogs}/>
+        <LogList/>
       </div>
     )
   }
 }
 
-export default connect(null, {getLogs})(LogListContainer)
+export default LogListContainer

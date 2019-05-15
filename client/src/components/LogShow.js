@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { getLogs } from '../actions';
+import { connect } from 'react-redux'
 //import { deleteLog } from '../actions'
 
 
@@ -15,36 +17,44 @@ class LogShow extends Component {
   //    this.props.deleteLog()
   // }
 
-  render(){
 
-    let log = this.props.logs.find(log => log.id === this.props.match.params.id)
+render(){
+
+    let log = this.props.logs.find(log => log.id == this.props.match.params.id)
 
     return (
-    <div className="card-container">
-      <div className="ui card">
-        { log ? <div> <div className="content">
-           <p>{log.date}</p>
-          <h4 id="title">{log.title}</h4>
-            <ul>
-              <li>Goals I accomplished today: {log.goals_accomplished}</li>
-              <li>What I learned: {log.learned}</li>
-              <li>What I don't understand: {log.unsure}</li>
-              <li>Goals for tomorrow: {log.goals_tomorrow}</li>
-            </ul>
-        </div>
-        <div>
-          <i className={`big ${log.mood} outline icon`}></i>
-          <button onClick={(event) => this.handleOnClick()}>Delete</button>
-          <Link to={`/logs/${log.id}/edit`}>Edit</Link>
-        </div> </div> : 'Loading...'}
-      </div>
-    </div>
-    )
-  }
+   <div className="card-container">
+     <div className="ui card">
+       { log ? <> <div className="content">
+          <p>{log.date}</p>
+         <h4 id="title">{log.title}</h4>
+           <ul>
+             <li>Goals I accomplished today: {log.goals_accomplished}</li>
+             <li>What I learned: {log.learned}</li>
+             <li>What I don't understand: {log.unsure}</li>
+             <li>Goals for tomorrow: {log.goals_tomorrow}</li>
+           </ul>
+       </div>
+       <div>
+         <i className={`big ${log.mood} outline icon`}></i>
+         <button onClick={() => this.handleOnClick()}>Delete</button>
+         <a>Edit</a>
+       </div> </> : 'Loading...'}
+     </div>
+   </div>
+   )
+ }
 }
 
 LogShow.defaultProps={
   logs: []
 }
 
-export default LogShow;
+const mapStateToProps = state => {
+  return {
+    logs: state.logReducer.logs,
+    loading: state.logReducer.loading
+  }
+}
+
+export default connect(mapStateToProps, {getLogs})(LogShow)

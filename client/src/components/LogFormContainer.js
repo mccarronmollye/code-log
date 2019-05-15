@@ -11,7 +11,7 @@ class LogFormContainer extends Component {
         <h1>Daily Code Log</h1>
       </div>
       <div className="card-input">
-        <LogForm addLog={this.props.addLog}/>
+        <LogForm addLog={this.props.addLog} history={this.props.history}/>
       </div>
     </div>
     )
