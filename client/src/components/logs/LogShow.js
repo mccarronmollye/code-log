@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getLogs } from '../actions';
+import { getLogs } from '../../actions';
 import { connect } from 'react-redux'
 //import { deleteLog } from '../actions'
 

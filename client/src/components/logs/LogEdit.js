@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './log.css'
+import '../log.css'
 
-class LogForm extends Component{
+class LogEdit extends Component{
 
   constructor(props){
     super(props)
@@ -25,7 +25,7 @@ class LogForm extends Component{
 
   handleOnSubmit(event){
     event.preventDefault();
-    this.props.addLog(this.state, this.props.history)
+    this.props.updateLog(this.state)
     this.setState({
       title: '',
       date: '',
@@ -52,7 +52,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Day 2 of #100DaysOfCode"
                   required
-                  autoComplete="off"
                 />
               </div>
               <div className="field">
@@ -64,7 +63,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="01/01/19"
                   required
-                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -76,7 +74,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Built form for personal project."
                   required
-                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -88,7 +85,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Properly organizing Component files in React"
                   required
-                  autoComplete="off"
                 />
               </div>
               <div className="field">
@@ -100,7 +96,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="How user input on the front end (React) will link to Rails backend of project."
                   required
-                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -112,7 +107,6 @@ class LogForm extends Component{
                   onChange={(event) => this.handleOnChange(event)}
                   placeholder="Persist user input to the database."
                   required
-                  autoComplete="off"
                   />
               </div>
               <div className="field">
@@ -155,4 +149,4 @@ class LogForm extends Component{
   }
 }
 
-export default LogForm;
+export default LogEdit;

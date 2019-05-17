@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LogForm from './LogForm'
 import { connect } from 'react-redux'
-import { addLog } from '../actions'
+import { addLog } from '../../actions'
 
 class LogFormContainer extends Component {
   render(){
