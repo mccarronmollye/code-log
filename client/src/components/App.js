@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LogFormContainer from './LogFormContainer'
+import LogForm from './LogForm'
 import LogListContainer from './LogListContainer'
 import LogList from './LogList'
 import LogShow from './LogShow'
@@ -18,9 +18,10 @@ class App extends Component {
             <h1><Header/></h1>
             <Route path="/" exact component={LogListContainer}/>
             <Route path ="/logs" exact component={LogList}/>
-            <Route path="/new" exact component={LogFormContainer}/>
-            <Route path ="/logs/:id/edit" exact component={LogEdit}/>
+            <Route path="/logs/new" exact component={LogCreate}/>
+            <Route path ="/logs/edit/:id" exact component={LogEdit}/>
             <Route path ="/logs/:id" exact component={LogShow}/>
+            <Route path ="/logs/delete" exact component={LogDelete}/>
           </div>
         </BrowserRouter>
       </div>
