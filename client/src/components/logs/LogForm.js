@@ -19,7 +19,12 @@ class LogForm extends Component{
               <Field name="learned" component={this.renderInput} label="What I learned today:"/>
               <Field name="unsure" component={this.renderInput} label="What I don't understand:"/>
               <Field name="goals_tomorrow" component={this.renderInput} label="Goals for tomorrow:"/>
-              <Field name="mood" component={this.renderInput} type="radio" label="How I feel about my coding progress today:"/>
+              <label>How I feel about my coding progress today:</label>
+                <div>
+                  <label><Field name="mood" component={input} type="radio" value="smile"/> :)</label>
+                  <label><Field name="mood" component={input} type="radio" value="nuetral"/> :|</label>
+                  <label><Field name="mood" component={input} type="radio" value="frown"/> :(</label>
+               </div>
           </form>
         </div>
       </div>
