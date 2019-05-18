@@ -9,7 +9,7 @@ class Header extends Component {
         All Code Logs
       </Link>
       <div className="center menu">
-        <Link to="/new" className="item">
+        <Link to="/logs/new" className="item">
           Create a new Code Log
         </Link>
       </div>

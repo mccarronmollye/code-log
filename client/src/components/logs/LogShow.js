@@ -23,7 +23,7 @@ render(){
     let log = this.props.logs.find(log => log.id == this.props.match.params.id)
 
     return (
-   <div className="card-container">
+   <div className="card-container ui grid">
      <div className="ui card">
        { log ? <> <div className="content">
           <p>{log.date}</p>
