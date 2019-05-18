@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LogList from './LogList'
-import { getLogs } from '../actions'
+import { getLogs } from '../../actions'
 import { connect } from 'react-redux'
 
 class LogListContainer extends Component {

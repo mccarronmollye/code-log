@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import LogForm from './LogForm'
-import LogListContainer from './LogListContainer'
-import LogList from './LogList'
-import LogShow from './LogShow'
+import LogForm from './logs/LogForm'
+import LogCreate from './logs/LogCreate'
+import LogDelete from './logs/LogDelete'
+import LogListContainer from './logs/LogListContainer'
+import LogList from './logs/LogList'
+import LogShow from './logs/LogShow'
 import Header from './Header'
-import LogEdit from './LogEdit'
+import LogEdit from './logs/LogEdit'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 
@@ -20,7 +22,7 @@ class App extends Component {
             <Route path ="/logs" exact component={LogList}/>
             <Route path="/logs/new" exact component={LogCreate}/>
             <Route path ="/logs/edit/:id" exact component={LogEdit}/>
-            <Route path ="/logs/:id" exact component={LogShow}/>
+            <Route path ="/log/:id" exact component={LogShow}/>
             <Route path ="/logs/delete" exact component={LogDelete}/>
           </div>
         </BrowserRouter>

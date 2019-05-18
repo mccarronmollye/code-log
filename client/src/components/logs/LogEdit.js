@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './log.css'
+import '../log.css'
 
 class LogEdit extends Component{
 
