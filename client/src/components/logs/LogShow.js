@@ -39,7 +39,7 @@ render(){
         <i className={`big ${log.mood} outline icon`}></i>
        <div>
          <button>Delete</button>
-         <a>Edit</a>
+         <Link to={`/logs/edit/${log.id}`}>Edit</Link>
        </div> </> : 'Loading...'}
      </div>
    </div>
