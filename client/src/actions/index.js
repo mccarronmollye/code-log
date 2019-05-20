@@ -1,3 +1,5 @@
+import logs from '../apis/logs'
+
 export const getLogs = () => {
   return dispatch => {
     dispatch({type: "LOADING_LOGS"});
@@ -49,4 +51,10 @@ export const updateLog = (log) => {
     }).then(resp => resp.json())
       .then(log => dispatch({type: "EDIT_LOG", log}))
   }
+}
+
+export const fetchLog = (id) => async dispatch => {
+  const response = await logs.get(`logs/${id}`)
+
+  dispatch({ type: 'FETCH_LOG', payload: response.data})
 }

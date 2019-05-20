@@ -4,7 +4,7 @@ import LogListContainer from './logs/LogListContainer'
 import LogList from './logs/LogList'
 import LogShow from './logs/LogShow'
 import Header from './Header'
-import LogEdit from './logs/LogEdit'
+import LogEditContainer from './logs/LogEditContainer'
 import LogDelete from './logs/LogDelete'
 import { BrowserRouter, Route } from 'react-router-dom'
 
@@ -20,7 +20,7 @@ class App extends Component {
             <Route path="/" exact component={LogListContainer}/>
             <Route path ="/logs" exact component={LogList}/>
             <Route path="/logs/new" exact component={LogFormContainer}/>
-            <Route path ="/logs/edit/:id" exact component={LogEdit}/>
+            <Route path ="/logs/edit/:id" exact component={LogEditContainer}/>
             <Route path ="/logs/:id" exact component={LogShow}/>
             <Route path ="/logs/delete" exact component={LogDelete}/>
           </div>
