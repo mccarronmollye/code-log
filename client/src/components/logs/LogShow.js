@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getLogs } from '../../actions';
 import { connect } from 'react-redux'
+import '../log.css'
 //import { deleteLog } from '../actions'
 
 
@@ -23,7 +24,7 @@ render(){
     let log = this.props.logs.find(log => log.id == this.props.match.params.id)
 
     return (
-   <div className="card-container ui grid">
+   <div className="card-container">
      <div className="ui card">
        { log ? <> <div className="content">
           <p>{log.date}</p>
@@ -35,9 +36,9 @@ render(){
              <li>Goals for tomorrow: {log.goals_tomorrow}</li>
            </ul>
        </div>
+        <i className={`big ${log.mood} outline icon`}></i>
        <div>
-         <i className={`big ${log.mood} outline icon`}></i>
-         <button onClick={() => this.handleOnClick()}>Delete</button>
+         <button>Delete</button>
          <a>Edit</a>
        </div> </> : 'Loading...'}
      </div>

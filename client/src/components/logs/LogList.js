@@ -20,7 +20,9 @@ class LogList extends Component {
             <div className="card" key={log.id}>
               <div className="content">
                 <p>{log.date}</p>
-                <h4 id="title">{log.title}</h4>
+                <div id="title">
+                  <Link to={`/logs/${log.id}`}>{log.title}</Link>
+                </div>
                   <ul>
                     <li>Goals I accomplished today: {log.goals_accomplished}</li>
                     <li>What I learned: {log.learned}</li>
@@ -28,9 +30,8 @@ class LogList extends Component {
                     <li>Goals for tomorrow: {log.goals_tomorrow}</li>
                   </ul>
               </div>
-              <div>
+              <div className="mood">
                 <i className={`big ${log.mood} outline icon`}></i>
-                <Link to={`/logs/${log.id}`}>View Log</Link>
               </div>
             </div>
       )
