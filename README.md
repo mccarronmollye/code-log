@@ -1,4 +1,4 @@
-# Yoga Private Client Tracker
+# Daily Code Log
 
 Daily Code Log is a web application where you can track daily coding progress. You can keep track of what you learned, traction that's made towards goals, what you don't understand, and plan for the next day all in one place. You can then review all your code logs to reflect on the progress you have made!
 
