@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "engines":{
+  "engines": {
     "npm": "6.9.0",
     "node": "11.5.0"
   },
