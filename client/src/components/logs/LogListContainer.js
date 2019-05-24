@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import LogList from './LogList'
-import { connect } from 'react-redux'
 
 class LogListContainer extends Component {
   render(){

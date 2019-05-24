@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-import LogShow from './LogShow'
 import { getLogs } from '../../actions'
-import _ from 'lodash';
 import '../log.css'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'

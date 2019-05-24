@@ -21,7 +21,7 @@ class LogShow extends Component {
 
 render(){
 
-    let log = this.props.logs.find(log => log.id == this.props.match.params.id)
+    let log = this.props.logs.find(log => log.id === this.props.match.params.id)
 
     return (
    <div className="card-container">
