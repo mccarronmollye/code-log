@@ -16,7 +16,7 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <h1><Header/></h1>
+            <div><Header/></div>
             <Switch>
               <Route path="/" exact component={LogListContainer}/>
               <Route path ="/logs" exact component={LogList}/>
