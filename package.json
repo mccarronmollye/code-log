@@ -1,7 +1,7 @@
 {
   "name": "code-log",
   "engines": {
-    "node": "6.3.1"
+    "node": "11.5.0"
   },
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
