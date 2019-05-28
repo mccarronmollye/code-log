@@ -36,6 +36,11 @@ class LogsController < ApplicationController
   # DELETE /logs/1
   def destroy
     @log.destroy
+    if @log.destroy
+      head :no_content, status: :ok
+    else
+      render json: @log.errors, status: :unprocessable_entity
+    end
   end
 
   private

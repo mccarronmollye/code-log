@@ -1,4 +1,5 @@
 import logs from '../apis/logs'
+import axios from 'axios'
 
 export const signIn = (userId) => {
   return {
@@ -22,13 +23,6 @@ export const getLogs = () => {
   }
 }
 
-//return function (dispatch)
-  //dispatch action to start the loading proccess
-  // return fetch url
-    //get response
-    //dispatch data
-
-
 export const addLog = (log, history) => {
   return dispatch => {
     return fetch('/logs', {
@@ -44,15 +38,15 @@ export const addLog = (log, history) => {
   }
 }
 
-export const deleteLog = (log) => {
-  return dispatch => {
-    return fetch(`/logs`, {
-      method: "DELETE",
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({log})
-    }).then(resp => resp.json())
-      .then(log => dispatch({type: "DELETE_LOG", log}))
-  }
+export const removeLog = (id) => {
+  axios.delete( '/logs/' + id )
+  .then(response => {
+    const logs = this.state.logs.filter(
+      log => log.id !== id
+    )
+    this.setState({logs})
+  })
+  .catch(error => console.log(error))
 }
 
 export const updateLog = (log) => {

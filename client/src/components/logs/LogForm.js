@@ -13,7 +13,8 @@ class LogForm extends Component{
       unsure: '',
       goals_accomplished: '',
       goals_tomorrow: '',
-      mood: 'smile'
+      mood: 'smile',
+      userId: ''
     }
   }
 

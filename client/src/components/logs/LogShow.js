@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getLogs } from '../../actions';
+import { getLogs, removeLog } from '../../actions';
 import { connect } from 'react-redux'
 import '../log.css'
 //import { deleteLog } from '../actions'
@@ -22,6 +22,7 @@ class LogShow extends Component {
 render(){
 
     let log = this.props.logs.find(log => log.id == this.props.match.params.id)
+    let onRemoveLog = this.props.removeLog
 
     return (
    <div className="card-container">
@@ -38,7 +39,7 @@ render(){
        </div>
         <i className={`big ${log.mood} outline icon`}></i>
        <div>
-         <button>Delete</button>
+         <button onClick={()=> onRemoveLog(log.id)}>Delete</button>
          <Link to={`#`}>Edit</Link>
        </div> </> : 'Loading...'}
      </div>
@@ -58,4 +59,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getLogs})(LogShow)
+export default connect(mapStateToProps, {getLogs, removeLog})(LogShow)
