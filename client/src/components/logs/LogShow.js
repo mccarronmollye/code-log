@@ -37,9 +37,9 @@ render(){
        </div>
         <i className={`big ${log.mood} outline icon`}></i>
        <div>
-         <button onClick={() => this.props.deleteLog(log.id)}>Delete</button>
+         <Link to={`/logs`} onClick={() => this.props.deleteLog(log.id)}> Delete </Link>
          <Link to={`#`}>Edit</Link>
-       </div> </> : 'Loading...'}
+       </div> </> : <Link to={`/logs`}>Back to Home Page</Link> }
      </div>
    </div>
    )

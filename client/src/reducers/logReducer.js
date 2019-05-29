@@ -1,9 +1,10 @@
 import {destroyLog} from '../actions'
 
-export const deleteLog = (id) => {
+export const deleteLog = (id, history) => {
   return (dispatch) => {
     destroyLog(id).then(() => dispatch(removeLog(id)))
   }
+  history.push('/logs')
 }
 
 export const removeLog = (id) => ({type: 'DELETE_LOG'})
