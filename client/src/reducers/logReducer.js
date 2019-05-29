@@ -1,3 +1,13 @@
+import {destroyLog} from '../actions'
+
+export const deleteLog = (id) => {
+  return (dispatch) => {
+    destroyLog(id).then(() => dispatch(removeLog(id)))
+  }
+}
+
+export const removeLog = (id) => ({type: 'DELETE_LOG'})
+
 export default (state = {logs: [], loading: false}, action) => {
   switch (action.type){
     case "LOADING_LOGS":
@@ -21,7 +31,8 @@ export default (state = {logs: [], loading: false}, action) => {
     case "DELETE_LOG":
       const logs = state.logs.filter(log => log.id !== action.id)
       return {
-        ...state, logs
+        ...state,
+        logs
       }
 
     case "UPDATE_LOG":

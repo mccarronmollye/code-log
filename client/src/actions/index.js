@@ -38,15 +38,14 @@ export const addLog = (log, history) => {
   }
 }
 
-export const removeLog = (id) => {
-  axios.delete( '/logs/' + id )
-  .then(response => {
-    const logs = this.state.logs.filter(
-      log => log.id !== id
-    )
-    this.setState({logs})
+export const destroyLog = (id) => {
+  return fetch(`/logs/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
   })
-  .catch(error => console.log(error))
 }
 
 export const updateLog = (log) => {
