@@ -49,15 +49,17 @@ export const destroyLog = (id) => {
 }
 
 export const updateLog = (log) => {
-  return dispatch => {
     return fetch(`/logs/${log.id}`, {
       method: "PUT",
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({log})
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(log)
     }).then(resp => resp.json())
-      .then(log => dispatch({type: "EDIT_LOG", log}))
-  }
 }
+
+//.then(log => dispatch({type: "EDIT_LOG", log})) line 60.
 
 export const fetchLog = (id) => async dispatch => {
   const response = await logs.get(`logs/${id}`)

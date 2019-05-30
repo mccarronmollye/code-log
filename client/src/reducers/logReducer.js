@@ -1,4 +1,4 @@
-import {destroyLog} from '../actions'
+import {destroyLog, updateLog} from '../actions'
 
 export const deleteLog = (id, history) => {
   return (dispatch) => {
@@ -8,6 +8,18 @@ export const deleteLog = (id, history) => {
 }
 
 export const removeLog = (id) => ({type: 'DELETE_LOG'})
+
+export const editLog = (id) => {
+  return (dispatch, getState) => {
+    const {logs} = getState().log
+    const log = logs.find(t => t.id == id)
+    const data = getState(id) //change this line!!!
+    updateLog(data)
+      .then(res => dispatch(replaceLog(res)))
+  }
+}
+
+export const replaceLog = (log) => ({type: 'LOG_REPLACE', payload: log })
 
 export default (state = {logs: [], loading: false}, action) => {
   switch (action.type){
@@ -36,9 +48,11 @@ export default (state = {logs: [], loading: false}, action) => {
         logs
       }
 
-    case "UPDATE_LOG":
+    case "LOG_REPLACE":
       return {
-        //map through existing logs and update log that needs to be updated.
+        ...state,
+        logs: state.logs
+          .map(log => log.id === action.payload.id ? action.payload : log)
       }
 
     default:
