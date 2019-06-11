@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../log.css'
+//import authReducer from '../../reducers/authReducer'
 
 class LogForm extends Component{
 
@@ -14,7 +15,8 @@ class LogForm extends Component{
       goals_accomplished: '',
       goals_tomorrow: '',
       mood: 'smile',
-      userId: ''
+      user_id: '',
+      editing:false
     }
   }
 

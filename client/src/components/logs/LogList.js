@@ -3,6 +3,7 @@ import { getLogs } from '../../actions'
 import '../log.css'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
+import LogEdit from './LogEdit'
 
 class LogList extends Component {
 

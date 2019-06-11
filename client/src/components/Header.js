@@ -14,7 +14,9 @@ class Header extends Component {
           Create a new Code Log
         </Link>
       </div>
-      <div className="right menu"><GoogleAuth /></div>
+      <div className="right menu">
+        
+      </div>
     </div>
     )
   }

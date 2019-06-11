@@ -50,7 +50,6 @@ class LogEdit extends Component{
                   type="text"
                   value={this.state.title}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="Day 2 of #100DaysOfCode"
                   required
                 />
               </div>
@@ -61,7 +60,6 @@ class LogEdit extends Component{
                   type="date"
                   value={this.state.date}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="01/01/19"
                   required
                   />
               </div>
@@ -72,7 +70,6 @@ class LogEdit extends Component{
                   rows="2"
                   value={this.state.goals_accomplished}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="Built form for personal project."
                   required
                   />
               </div>
@@ -83,7 +80,6 @@ class LogEdit extends Component{
                   rows="2"
                   value={this.state.learned}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="Properly organizing Component files in React"
                   required
                 />
               </div>
@@ -94,7 +90,6 @@ class LogEdit extends Component{
                   rows="2"
                   value={this.state.unsure}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="How user input on the front end (React) will link to Rails backend of project."
                   required
                   />
               </div>
@@ -105,7 +100,6 @@ class LogEdit extends Component{
                   rows="2"
                   value={this.state.goals_tomorrow}
                   onChange={(event) => this.handleOnChange(event)}
-                  placeholder="Persist user input to the database."
                   required
                   />
               </div>
