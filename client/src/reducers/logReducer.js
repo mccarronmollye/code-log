@@ -4,7 +4,7 @@ export const deleteLog = (id, history) => {
   return (dispatch) => {
     destroyLog(id).then(() => dispatch(removeLog(id)))
   }
-  history.push('/logs')
+  history.push('/')
 }
 
 export const removeLog = (id) => ({type: 'DELETE_LOG'})

@@ -5,17 +5,19 @@ import GoogleAuth from './GoogleAuth'
 class Header extends Component {
   render(){
     return(
-    <div className="ui secondary pointing menu">
-      <Link to="/" className="item">
-        All Code Logs
-      </Link>
-      <div className="center menu">
-        <Link to="/logs/new" className="item">
-          Create a new Code Log
+    <div className="header">
+      <div className="ui secondary pointing menu">
+        <Link to="/" className="item">
+          All Code Logs
         </Link>
-      </div>
-      <div className="right menu">
-        
+        <div className="center menu">
+          <Link to="/logs/new" className="item">
+            Create a new Code Log
+          </Link>
+        </div>
+        <div className="right menu">
+
+        </div>
       </div>
     </div>
     )
